@@ -1,0 +1,67 @@
+{
+  "name": "@event-broker/devtools",
+  "version": "1.0.0",
+  "description": "Development tools for Event Broker",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Event Broker Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/event-broker/devtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/event-broker/devtools/issues"
+  },
+  "homepage": "https://github.com/event-broker/devtools#readme",
+  "scripts": {
+    "build": "tsc && npm run build:css && npm run build:assets",
+    "build:css": "cp src/components/*.css dist/components/ 2>/dev/null || true && cp src/components/tabs/*.css dist/components/tabs/ 2>/dev/null || true",
+    "build:assets": "mkdir -p dist/assets && cp -r src/assets/* dist/assets/ 2>/dev/null || true",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,md,css}\"",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-resizable": "^3.0.8",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "react-resizable": "^3.0.5"
+  },
+  "keywords": [
+    "event-broker",
+    "devtools",
+    "debugging",
+    "microfrontends",
+    "microfrontend",
+    "mfe",
+    "micro-frontends",
+    "observability",
+    "monitoring",
+    "react",
+    "typescript",
+    "event-driven",
+    "developer-tools"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

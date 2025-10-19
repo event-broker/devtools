@@ -1,0 +1,149 @@
+/* 🎛️ EventBroker DevTools - Floating Button Styles */
+
+.devtools-floating-button {
+  position: fixed;
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", sans-serif;
+}
+
+/* Позиционирование для разных режимов */
+.devtools-floating-button--bottom {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.devtools-floating-button--right {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.devtools-floating-button--left {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.devtools-floating-button--floating {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Основная кнопка - круглая с совой */
+.devtools-floating-button__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.devtools-floating-button__btn:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.devtools-floating-button__btn--open {
+  background: #2a2a2a;
+}
+
+.devtools-floating-button__btn--disconnected {
+  background: #666666;
+  cursor: not-allowed;
+}
+
+.devtools-floating-button__btn--disconnected:hover {
+  background: #666666;
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Иконка маскота (сова) */
+.devtools-floating-button__mascot {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.devtools-floating-button__btn:hover .devtools-floating-button__mascot {
+  transform: scale(1.1);
+}
+
+/* Индикатор подключения */
+.devtools-floating-button__status {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #1a1a1a;
+}
+
+.devtools-floating-button__status--connected {
+  background: #22c55e;
+}
+
+.devtools-floating-button__status--disconnected {
+  background: #ef4444;
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.devtools-floating-button__btn--connected
+  .devtools-floating-button__status--connected {
+  animation: pulse 2s infinite;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .devtools-floating-button {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .devtools-floating-button__btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .devtools-floating-button__btn {
+    background: #2d2d2d;
+    color: #ffffff;
+  }
+
+  .devtools-floating-button__btn:hover {
+    background: #3d3d3d;
+  }
+}

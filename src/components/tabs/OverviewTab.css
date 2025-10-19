@@ -1,0 +1,325 @@
+/* 📊 Overview Tab Styles */
+
+.overview-tab {
+  padding: 16px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overview-tab__section {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.overview-tab__section--half {
+  flex: 1;
+}
+
+.overview-tab__row {
+  display: flex;
+  gap: 16px;
+}
+
+.overview-tab__section-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* System Health */
+.overview-tab__health {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overview-tab__health-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.overview-tab__health-label {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.overview-tab__health-note {
+  font-size: 12px;
+  color: #666666;
+  margin-left: 8px;
+}
+
+/* Live Metrics */
+.overview-tab__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.overview-tab__metric {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+}
+
+.overview-tab__metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 4px;
+}
+
+.overview-tab__metric-label {
+  font-size: 11px;
+  color: #666666;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Recent Events */
+.overview-tab__recent-events {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.overview-tab__event {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.overview-tab__event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.overview-tab__event-type {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-family: monospace;
+}
+
+.overview-tab__event-status {
+  font-size: 12px;
+}
+
+.overview-tab__event-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #666666;
+}
+
+/* Clients */
+.overview-tab__clients {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.overview-tab__client {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.overview-tab__client-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.overview-tab__client-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-family: monospace;
+}
+
+.overview-tab__client-type {
+  font-size: 10px;
+  background: #e9ecef;
+  color: #666666;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.overview-tab__client-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #666666;
+}
+
+/* Performance */
+.overview-tab__performance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.overview-tab__perf-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.overview-tab__perf-label {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.overview-tab__perf-value {
+  font-size: 12px;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+/* Empty states */
+.overview-tab__empty {
+  text-align: center;
+  color: #666666;
+  font-size: 12px;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .overview-tab__section {
+    background: #2d2d2d;
+    border-color: #404040;
+  }
+
+  .overview-tab__section-title {
+    color: #ffffff;
+  }
+
+  .overview-tab__health-label {
+    color: #ffffff;
+  }
+
+  .overview-tab__health-note {
+    color: #cccccc;
+  }
+
+  .overview-tab__metric,
+  .overview-tab__event,
+  .overview-tab__client,
+  .overview-tab__perf-item {
+    background: #1a1a1a;
+    border-color: #404040;
+  }
+
+  .overview-tab__event-type,
+  .overview-tab__client-name {
+    color: #ffffff;
+  }
+
+  .overview-tab__event-details,
+  .overview-tab__client-details {
+    color: #cccccc;
+  }
+
+  .overview-tab__client-type {
+    background: #404040;
+    color: #cccccc;
+  }
+
+  .overview-tab__perf-label {
+    color: #cccccc;
+  }
+
+  .overview-tab__perf-value {
+    color: #ffffff;
+  }
+
+  .overview-tab__empty {
+    color: #cccccc;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .overview-tab__row {
+    flex-direction: column;
+  }
+
+  .overview-tab__metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overview-tab__performance {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 📈 Delivery Statistics */
+.overview-tab__delivery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.overview-tab__delivery-stat {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.overview-tab__delivery-stat:hover {
+  border-color: #007acc;
+  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.1);
+}
+
+.overview-tab__delivery-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.overview-tab__delivery-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .overview-tab__delivery {
+    grid-template-columns: 1fr;
+  }
+}
