@@ -267,8 +267,8 @@ DevTools are optimized for minimal performance impact:
 
 Part of the Event Broker ecosystem:
 
-- **[@event-broker/core](../event-broker)** - Core event broker library
-- **[@event-broker/event-registry](../event-registry)** - Event type registry
+- **[@event-broker/core](https://github.com/event-broker/core)** - Core event broker library
+- **[@event-broker/event-registry](https://github.com/event-broker/event-registry)** - Event type registry
 
 ## 🤝 Contributing
 
