@@ -2,7 +2,6 @@
   "name": "@event-broker/devtools",
   "version": "1.0.0",
   "description": "Development tools for Event Broker",
-  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Event Broker Contributors",
